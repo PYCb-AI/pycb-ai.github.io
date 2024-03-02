@@ -19,9 +19,38 @@
             height: 100%;
             border: none;
         }
+        #popup {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black;
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <iframe src="https://en.wikipedia.org" title="Wikipedia"></iframe>
+    <div id="popup">
+        <p>ПЕРЕД ИСПОЛЬЗОВАНИЕМ ДАННОГО СЕРВИСА ВЫ СОГЛАШАЕТЕСЬ С ПРАВИЛАМИ ИСПОЛЬЗОВАНИЯ СЕРВИСА. ВЫ ПРОЧИТАЛИ ПРАВИЛА ИСПОЛЬЗОВАНИЯ СЕРВИСА АИС "ГДР"?</p>
+        <button onclick="loadIframe()">ДА</button>
+        <button onclick="closePopup()">НЕТ</button>
+    </div>
+    <iframe id="iframe" src="https://en.wikipedia.org" title="Wikipedia"></iframe>
+
+    <script>
+        function loadIframe() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('iframe').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
