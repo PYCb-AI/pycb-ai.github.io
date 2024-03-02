@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wikipedia in a Frame</title>
+    <title>Генератор Древних Русов - АИС "ГДР" by PYCb AI</title>
     <style>
         body, html {
             height: 100%;
@@ -11,6 +11,27 @@
             padding: 0;
             overflow: hidden;
         }
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: none;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
         iframe {
             position: absolute;
             top: 0;
@@ -18,6 +39,7 @@
             width: 100%;
             height: 100%;
             border: none;
+		display: none;
         }
         #popup {
             font-family: 'Times New Roman', Times, serif;
@@ -30,18 +52,24 @@
             background-color: white;
             padding: 20px;
             border: 2px solid black;
-            display: none;
+text-align: justify;  /* Add this line to justify the text */
         }
     </style>
 </head>
 <body>
     <div id="popup">
-        <p>ПЕРЕД ИСПОЛЬЗОВАНИЕМ ДАННОГО СЕРВИСА ВЫ СОГЛАШАЕТЕСЬ С ПРАВИЛАМИ ИСПОЛЬЗОВАНИЯ СЕРВИСА. ВЫ ПРОЧИТАЛИ ПРАВИЛА ИСПОЛЬЗОВАНИЯ СЕРВИСА АИС "ГДР"?</p>
-        <button onclick="loadIframe()">ДА</button>
-        <button onclick="closePopup()">НЕТ</button>
+        <p>ПЕРЕД ИСПОЛЬЗОВАНИЕМ ДАННОГО СЕРВИСА ВЫ СОГЛАШАЕТЕСЬ С ПРАВИЛАМИ ИСПОЛЬЗОВАНИЯ СЕРВИСА (ПРАВИЛАМИ СЕРВИСА) АИС "ГДР".
+ВЫ МОЖЕТЕ ЗАДАТЬ ЛЮБЫЕ ВОПРОСЫ ЧЕРЕЗ ФОРМУ, ДОСТУПНУЮ ПО АДРЕСУ <i>https://github.com/PYCb-AI/pycb-ai.github.io/issues</i>, А ТАКЖЕ ЗАПРОСИТЬ ТАМ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ КАСАЕМО ПРАВИЛ. МЕРЫ ПО ОБХОДУ ДАННОГО ОГРАНИЧИТЕЛЬНОГО ОКНА ЗАПРЕЩЕНЫ. ВЫ ПРОЧИТАЛИ ПРАВИЛА ИСПОЛЬЗОВАНИЯ СЕРВИСА АИС "ГДР"?</p>
+        <button onclick="loadIframe()">ДА, Я ПРОЧИТАЛ(-А), ПОНЯЛ(-А) И ПРИНЯЛ(-А) ПРАВИЛА СЕРВИСА АИС "ГДР"</button>
+        <button onclick="closePopup()">НЕТ, Я НЕ ПРОЧИТАЛ(-А) ПРАВИЛА ИСПОЛЬЗОВАНИЯ СЕРВИСА АИС "ГДР"</button>
     </div>
-    <iframe id="iframe" src="https://en.wikipedia.org" title="Wikipedia"></iframe>
-
+    <iframe id="iframe" src="https://en.wikipedia.org" title="АИС ГДР"></iframe>
+<div id="unac" class="video-container">
+    <video autoplay loop muted>
+      <source src="https://motionbgs.com/media/4295/forest-sunset.3840x2160.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
     <script>
         function loadIframe() {
             document.getElementById('popup').style.display = 'none';
@@ -50,6 +78,8 @@
 
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
+alert('ВАМ БЫЛО ОТКАЗАНО В ИСПОЛЬЗОВАНИИ АИС "ГДР"!');
+document.getElementById('unac').style.display = 'block';
         }
     </script>
 </body>
