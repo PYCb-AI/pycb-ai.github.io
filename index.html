@@ -75,17 +75,17 @@ text-align: justify;  /* Add this line to justify the text */
 }
 	    
         function loadIframe() {
+		changeBodyBg('black');
             document.getElementById('popup').style.display = 'none';
 		alert('ВЫ СОГЛАСИЛИСЬ С ПРАВИЛАМИ ИСПОЛЬЗОВАНИЯ АИС "ГДР"!');
             document.getElementById('iframe').style.display = 'block';
-		changeBodyBg('black');
         }
 
         function closePopup() {
+		changeBodyBg('black');
             document.getElementById('popup').style.display = 'none';
 alert('ВАМ БЫЛО ОТКАЗАНО В ИСПОЛЬЗОВАНИИ АИС "ГДР"!');
 document.getElementById('unac').style.display = 'block';
-		changeBodyBg('black');
         }
     </script>
 </body>
