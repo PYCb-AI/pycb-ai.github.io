@@ -70,15 +70,21 @@ text-align: justify;  /* Add this line to justify the text */
   </div>
 		<b>Made with 💘 in Kartupeļu iela, Riga, Latvia - Pycb-AI 2024</b>
     <script>
+	    function changeBodyBg(color) {
+  document.body.style.background = color;
+}
+	    
         function loadIframe() {
             document.getElementById('popup').style.display = 'none';
             document.getElementById('iframe').style.display = 'block';
+		changeBodyBg('black');
         }
 
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
 alert('ВАМ БЫЛО ОТКАЗАНО В ИСПОЛЬЗОВАНИИ АИС "ГДР"!');
 document.getElementById('unac').style.display = 'block';
+		changeBodyBg('black');
         }
     </script>
 </body>
