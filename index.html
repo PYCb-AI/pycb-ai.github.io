@@ -69,6 +69,7 @@ text-align: justify;  /* Add this line to justify the text */
       Your browser does not support the video tag.
     </video>
   </div>
+	<img id="blocked" style = "display: none;" src ="https://i.ytimg.com/vi/3mKU5k9kHEg/maxresdefault.jpg"></img>
 		<b id="note">Made with 💘 in Riga, Latvia (Kartupeļu iela, Ziepniekkalns) - Pycb-AI 2024; [Нейросеть Древних Русов, Русь ИИ, Русь АИ, славянский искусственный интеллект]</b>
     <script>
 	    function changeBodyBg(color) {
@@ -87,7 +88,8 @@ text-align: justify;  /* Add this line to justify the text */
 		changeBodyBg('black');
             document.getElementById('popup').style.display = 'none';
 alert('ВАМ БЫЛО ОТКАЗАНО В ИСПОЛЬЗОВАНИИ АИС "ГДР"!');
-document.getElementById('unac').style.display = 'block';
+document.getElementById('unac').style.display = 'none';
+		document.getElementById('blocked').style.display = 'block';
         }
     </script>
 </body>
