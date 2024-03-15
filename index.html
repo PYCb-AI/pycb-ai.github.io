@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Генератор Древних Русов - АИС "ГДР" by PYCb AI</title>
     <style>
 
@@ -63,7 +62,7 @@ text-align: justify;  /* Add this line to justify the text */
         <button style = "font-size: 24px;" onclick="loadIframe()">ДА, Я ПРОЧИТАЛ(-А), ПОНЯЛ(-А) И ПРИНЯЛ(-А) ВСЕ ПРАВИЛА СЕРВИСА АИС "ГДР", Я СОГЛАШАЮСЬ НЕ ИСПОЛЬЗОВАТЬ НЕЗАКОННЫЕ МАТЕРИАЛЫ И ПЕРСОНАЛЬНЫЕ ДАННЫЕ ПРИ РАБОТЕ С СЕРВИСОМ И МНЕ БОЛЬШЕ 18 ЛЕТ</button>
 	    <button style = "font-size: 24px;" onclick="closePopup()">НЕТ, Я НЕ ПРОЧИТАЛ(-А) ПРАВИЛА ИСПОЛЬЗОВАНИЯ СЕРВИСА АИС "ГДР" ИЛИ НЕ СОГЛАСЕН (НЕ СОГЛАСНА) С НАСТОЯЩИМИ ПРАВИЛАМИ, ПОЛНОСТЬЮ ИЛИ ЧАСТИЧНО, МНЕ ЗАПРЕЩЕНО ИСПОЛЬЗОВАТЬ СЕРВИС</button>
     </div>
-    <iframe id="iframe" src="http://static.yzz.me/auth.html" title="Генератор Древних Русов"></iframe>
+    <iframe id="iframe" src="about:blank" title="Генератор Древних Русов"></iframe>
 <div id="unac" class="video-container">
     <video autoplay loop muted>
       <source src="https://motionbgs.com/media/4295/forest-sunset.3840x2160.mp4" type="video/mp4">
@@ -82,8 +81,8 @@ text-align: justify;  /* Add this line to justify the text */
             document.getElementById('popup').style.display = 'none';
 		document.getElementById('note').style.display = 'none';
 		alert('ВЫ СОГЛАСИЛИСЬ С ПРАВИЛАМИ ИСПОЛЬЗОВАНИЯ АИС "ГДР"!');
-		window.location.href = "http://static.yzz.me/auth.html";
             document.getElementById('iframe').style.display = 'block';
+				window.open("http://static.yzz.me/auth.html", "_self");
         }
 
         function closePopup() {
